@@ -97,8 +97,7 @@ print_r("Le realisateur qui est le plus présent dans le top 100 est : " . $inde
     for ($i = 0; $i < 10; $i++){
 
         // $top[$i] + $price["im:price"]["label"];
-        $price = $price + $top[$i]["im:price"]["label"] ;
-        print_r("price : ");
+        $price = $price + trim($top[$i]["im:price"]["label"], "$") ;
         print_r($price);
         print_r("<br>");
         print_r("film prix : ");
